@@ -30,15 +30,17 @@
             </div>
         </section>
         <!-- banner section -->
-        <section class="mt-4 border  bg-[url(images/banner.png)] bg-cover bg-no-repeat text-center flex  items-center justify-center min-h-screen relative">
+        <section class="mt-4 bg-[url(images/banner.png)] bg-cover bg-no-repeat text-center flex  items-center justify-center min-h-screen relative">
             <!-- section container -->
             <div class="mt-16 mb-16">
                     <h1 class="text-white text-3xl lg:text-6xl font-extrabold font-raleway">End-to-End Travel with <br>
                         <span class="primary-color">Hero Express</span></h1>
                     <p class="my-4 primary-text text-[#FFFFFF99]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
+
+                    <!-- button js -->
                     <button class="rounded-xl px-7 py-4 font-raleway text-xl font-bold bg-[#1DD100] border-none">Buy Tickets</button>
                 <!-- three buttons -->
-                <div class="lg:absolute bottom-[-50px] left-auto lg:flex md:flex flex-col lg:flex-row md:flex-row gap-6">
+                <div class="relative lg:absolute md:absolute bottom-[-50px] left-auto lg:flex md:flex flex-col lg:flex-row md:flex-row gap-6">
                     <button class="w-80 border-b-4 border-b-[#1DD100] gap-2 px-8 py-5 flex rounded-3xl bg-white"><img src="images/people.png" alt="">
                         <p>
                             <span class="text-4xl font-bold">
@@ -68,11 +70,109 @@
             </div>
         </section>
         <!-- best offer section -->
-        <section>
-            
+        <section class="mt-20 text-center">
+            <h1 class="font-raleway font-bold lg:text-4xl">Best offers for you</h1>
+            <!-- coupon container -->
+            <div class="mt-12 mb-16 flex flex-col lg:flex-row justify-center items-center gap-4">
+                <!-- first offer -->
+            <div class="bg-[#FFBF0F] rounded-3xl flex justify-center items-center gap-6 w-full">
+                <p class="primary-text">
+                    <span class="font-extrabold text-4xl primary-heading">15% OFF
+                        </span><br><span>on your next purchase</span><br>
+                        use by January 2024
+                </p>
+                <img src="images/cupon-devider.png" alt="">
+                <p class="font-raleway primary-text">
+                    <span class="text-3xl font-bold primary-heading">
+                        NEW15
+                    </span><br>
+                    Coupon Code
+                </p>
+            </div>
+            <!-- second offer -->
+            <div class="bg-[#F78C9C] rounded-3xl flex justify-center items-center gap-6 w-full">
+                <p class="primary-text">
+                    <span class="font-extrabold text-4xl primary-heading">25% OFF
+                        </span><br><span>on your next purchase</span><br>
+                        use by January 2024
+                </p>
+                <img src="images/cupon-devider.png" alt="">
+                <p class="font-raleway primary-text">
+                    <span class="text-3xl font-bold primary-heading">
+                        Couple 20
+                    </span><br>
+                    Coupon Code
+                </p>
+            </div>
+            </div>
+            <button class="rounded-xl px-7 py-4 font-raleway text-xl font-bold primary-color border border-[#1DD100]">See All Offers</button>
         </section>
     </header>
+    <!-- main section starts from here -->
     <main>
+        <!-- ticket heading seats to be calculated dynamically -->
+        <section class="mt-20 bg-[#F7F8F8]">
+            <h1 class="primary-heading text-4xl font-bold font-raleway text-center">Hero Express</h1>
+            <p class="primary-text h-2/3 text-center">Your journey starts with us! Experience unparalleled service and convenience with our top-rated bus ticketing platform. <br> Book your tickets hassle-free and embark on a seamless travel experience. <br> We're committed to providing you with the best service every step of the way.</p>
+
+            <!-- ticket UI -->
+            <div class="lg:mx-20 mt-10 bg-[#FFF] flex flex-col lg:flex-row md:flex-row items-center justify-around w-auto rounded-3xl">
+                <div class="lg:w-2/3">
+                    <!-- ticket heading -->
+                <div class="flex justify-between rounded-3xl p-3">
+                    <div class="flex gap-4">
+                        <img src="images/bus-logo.png" alt="">
+                    <div>
+                        <h3 class="font-raleway font-bold text-3xl primary-heading">Hero Express</h3>
+                    <p class="primary-text">Coach-009-WEB ! AC_Business</p>
+                    </div>
+                    </div>
+<!-- -------------------------------------------------------------- -->
+                    <!-- js seat calculation -->
+                    <button class="flex gap-1 rounded-xl px-7 py-4 font-raleway text-xl font-bold primary-color">
+                        <img src="images/seat-green.png" alt="">
+                        <p>
+                            <!-- dynamical seats remaining js -->
+                            <span>40</span>
+                            Seats left
+                        </p>
+                    </button>
+                </div>
+                
+                <!-- ticket schedule -->
+                <div class="bg-[#F7F8F8] rounded-3xl space-y-6 p-5">
+                    <p class="flex justify-between primary-text">Route <span class="primary-heading font-semibold">Dhaka - Sylhet</span></p>
+                    <hr>
+                    <p class="flex justify-between primary-text">Departure Time <span class="primary-heading font-semibold">9:00 PM</span></p>
+                    <hr>
+                    <!-- three buttons -->
+                    <button class="btn rounded-xl px-7 primary-heading font-semibold">
+                        Boarding Point - Laxmipur
+                    </button>
+                    <button class="btn rounded-xl px-7 primary-heading font-semibold">
+                        Dropping Point - Bogura
+                    </button>
+                    <button class="btn rounded-xl px-7 primary-heading font-semibold">
+                        Est. Time - 11 Hour
+                    </button>
+                </div>
+                </div>
+                <img class="hidden lg:flex md:flex w-auto" src="images/info-devider.png" alt="">
+                <!-- fare container -->
+                <div class="w-auto flex items-center justify-center flex-col">
+                    
+                    <img class="ml-8 md:ml-2" src="images/fare.png" alt="">
+                    <div>
+                        <p class="primary-heading font-bold text-3xl text-center">
+                            550 Taka <br>
+                            <span class="primary-text">Per Seat</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
 
     </main>
     <footer>
