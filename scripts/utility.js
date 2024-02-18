@@ -1,16 +1,16 @@
-function getElement(elementId){
-    const element = document.getElementById(elementId);
-    return element;
+// buy now button scroll to ticketing section
+function scrollButton(){
+    getElement('scrollToTicket');
+    const scrollToTickets = getElement('scrollToTickets');
+    scrollToTickets.scrollIntoView({behavior: 'smooth'});
 }
 
-function setBackgroundColorById(elementId){
-    elementId.classList.add('bg-[#1DD100]');
+selectASeat('A2');
+selectASeat('A3');
+selectASeat('A4');
+selectASeat('B1');
+selectASeat('A1');
+selectASeat('B2');
+selectASeat('B3');
+selectASeat('B4');
 
-}
-function selectASeat(seatId){
-    const seatNo = getElement(seatId);
-    seatNo.addEventListener('click', function(){
-        setBackgroundColorById(seatNo);
-    })
-
-}

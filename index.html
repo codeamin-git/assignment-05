@@ -133,7 +133,7 @@
                         <img src="images/seat-green.png" alt="">
                         <p>
                             <!-- dynamical seats remaining js -->
-                            <span>40</span>
+                            <span id="remaining-seats">8</span>
                             Seats left
                         </p>
                     </button>
@@ -232,7 +232,7 @@
             <div class="bg-[#F7F8F8] space-y-3 p-4 rounded-xl">
                 <div class="flex justify-between primary-heading font-medium text-lg">
                     <h4>Seat
-                        <span>0</span>
+                        <span id="seat-count" class="bg-[#1DD100] rounded-full px-1 text-white">0</span>
                     </h4>
                     <h4>
                         Class
@@ -240,30 +240,31 @@
                     <h4>Price</h4>
                 </div>
                 <hr>
-                <div class="flex justify-between primary-text">
-                    <p>C2</p>
-                    <p>Economy</p>
-                    <p>550</p>
-                </div>
-    
-                <div class="flex justify-between primary-text">
-                    <p>C2</p>
-                    <p>Economy</p>
-                    <p>550</p>
+                <div id="">
+                    <div class="flex justify-between primary-text">
+                        <p id="seat-details">Default</p>
+                        <p>Economy</p>
+                        <p>550</p>
+                    </div>      
+                    <!-- <div class="flex justify-between primary-text">
+                        <p>Default</p>
+                        <p>Economy</p>
+                        <p>550</p>
+                    </div> -->
                 </div>
                 <hr>
                 <div class="flex justify-between primary-heading font-medium text-lg">
                     <h4>Total Price</h4>
-                    <h4>BDT <span>1100</span></h4>
+                    <h4>BDT <span id="total-price">0</span></h4>
                 </div>
-                <div class="flex">
-                    <input class="primary-text border rounded-lg py-2" type="text" placeholder="Have any copupon?">
-                <button class="text-white rounded-lg px-7 font-raleway font-bold bg-[#1DD100]">Apply</button>
+                <div id="coupon-container" class="flex">
+                    <input id="coupon" class="primary-text border rounded-lg py-2" type="text" placeholder="Have any copupon?">
+                <button id="coupon-button" class="text-white rounded-lg px-7 font-raleway font-bold bg-[#1DD100]" disabled>Apply</button>
                 </div>
 
                 <div class="flex justify-between primary-heading font-medium text-lg">
                     <h4>Grand Total</h4>
-                    <h4>BDT <span>1100</span></h4>
+                    <h4>BDT <span id="grand-total">0</span></h4>
                 </div>
             </div>
 
@@ -276,7 +277,7 @@
                 <h4 class="primary-heading font-semibold text-lg">
                     Phone Number*
                 </h4>
-                <input class="w-full py-2 rounded-xl border" type="text" placeholder="Enter your phone number">
+                <input id="phone-number" class="w-full py-2 rounded-xl border" type="text" placeholder="Enter your phone number">
 
                 <h4 class="primary-heading font-semibold text-lg">
                     Email ID
@@ -284,7 +285,7 @@
                 <input class="w-full py-2 rounded-xl border" type="text" placeholder="Enter your email id">
 
                 <!-- js modal to show button -->
-                <button class="w-full bg-[#1DD100] rounded-xl px-7 py-2 font-raleway text-xl font-bold text-white">
+                <button id="next-button" class="w-full bg-[#1DD100] rounded-xl px-7 py-2 font-raleway text-xl font-bold text-white" disabled>
                 Next
                 </button>
 
@@ -303,8 +304,6 @@
             </div>
 
         </section>
-
-
     </main>
     <footer class="bg-[#030712] h-full p-8 mt-20 space-y-6">
     <div class="flex flex-col gap-4 lg:flex-row justify-between items-center">
@@ -341,7 +340,36 @@
 
 
     <!-- scripts -->
-    <script src="scripts/utility.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/utility.js"></script>
+    
+
+    <!-- modal -->
+    <section>
+        <div id="modal-container" class="hidden">
+          <!-- The button to open modal -->
+
+<!-- Put this part before </body> tag -->
+<input type="checkbox" id="my_modal_6" class="modal-toggle" />
+<div class="modal" role="dialog">
+<div class="modal-box">
+  <img src="images/success.png" alt="">
+  <h3 class="font-bold text-2xl text-[#27AE60]">SUCCESS</h3>
+  <p class="py-4">
+      <span class="primary-heading font-medium text-xl">
+          Thank you for Booking Our Bus Seats. 
+      We are working hard to find the best service and deals for you.
+      </span> <br>
+      <span class="primary-text">
+          Shortly you will find a confirmation in your email.
+      </span>
+  </p>
+  <div class="modal-action">
+    <label id="modal-continue" for="my_modal_6" class="btn bg-[#27AE60]">Continue</label>
+  </div>
+</div>
+</div>
+        </div>
+      </section>
 </body>
 </html>
