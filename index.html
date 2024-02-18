@@ -38,7 +38,7 @@
                     <p class="my-4 primary-text text-[#FFFFFF99]">Yes, you can run unit tests and view the results directly within the app. The integrated testing features allow for a streamlined .</p>
 
                     <!-- button js -->
-                    <button class="rounded-xl px-7 py-4 font-raleway text-xl font-bold bg-[#1DD100] border-none">Buy Tickets</button>
+                    <button onclick="scrollButton()" class="rounded-xl px-7 py-4 font-raleway text-xl font-bold bg-[#1DD100] border-none">Buy Tickets</button>
                 <!-- three buttons -->
                 <div class="relative lg:absolute md:absolute bottom-[-50px] left-auto lg:flex md:flex flex-col lg:flex-row md:flex-row gap-6">
                     <button class="w-80 border-b-4 border-b-[#1DD100] gap-2 px-8 py-5 flex rounded-3xl bg-white"><img src="images/people.png" alt="">
@@ -109,7 +109,7 @@
         </section>
     </header>
     <!-- main section starts from here -->
-    <main class="mt-20 border-t-4 bg-[#F7F8F8] rounded-3xl border-t-[#1DD100]">
+    <main id="scrollToTickets" class="mt-20 border-t-4 bg-[#F7F8F8] rounded-3xl border-t-[#1DD100]">
         <!-- ticket heading seats to be calculated dynamically -->
         <section class="mt-20 bg-[#F7F8F8]">
             <h1 class="primary-heading text-4xl font-bold font-raleway text-center">Hero Express</h1>
@@ -405,6 +405,7 @@
 
 
     <!-- scripts -->
+    <script src="scripts/utility.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>
