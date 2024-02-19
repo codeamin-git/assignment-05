@@ -6,6 +6,7 @@ function getElement(elementId){
 let selectedSeatsCount = 0;
 function setBackgroundColorById(elementId){
     elementId.classList.add('bg-[#1DD100]');
+    elementId.classList.add('text-white');
     selectedSeatsCount++;
     remainingSeats--;
     seatCount();
@@ -17,6 +18,7 @@ function setBackgroundColorById(elementId){
 }
 
 const selectedSeats = new Set();
+
 function selectASeat(seatId){
     const seatNo = getElement(seatId);
     seatNo.addEventListener('click', function(){
@@ -57,7 +59,7 @@ function seatAndPhoneValidation(){
 
 function checkCoupon(){
     const couponContainer = getElement('coupon-container');
-    const couponApplyButton = getElement('coupon-button')
+    const couponApplyButton = getElement('coupon-button');
     const coupon = getElement('coupon');
     const couponValue = coupon.value;
     if(couponValue === 'NEW15'){
@@ -72,7 +74,7 @@ function checkCoupon(){
         couponApplyButton.disabled = false;
         couponApplyButton.classList.add('bg-[#1DD100]');
         couponApplyButton.addEventListener('click', function(){
-            fareCount(0.25);
+            fareCount(0.20);
             couponContainer.classList.add('hidden');
         })
     } else{
