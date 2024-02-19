@@ -16,6 +16,10 @@ function setBackgroundColorById(elementId){
     seatAndPhoneValidation();
 }
 
+function hideBackgroundColor(elementId){
+    elementId.classList.remove('bg-[#1DD100]');
+}
+
 function selectASeat(seatId){
     const seatNo = getElement(seatId);
     seatNo.addEventListener('click', function(){
@@ -32,10 +36,11 @@ function seatAndPhoneValidation(){
     const number = getElement('phone-number');
     const checkInput = number.value;
     const nextButton = getElement('next-button');
-    if(checkInput.trim() === '' || isNaN(selectedSeatsCount) || selectedSeatsCount === 0){
+    if(isNaN(parseInt(checkInput)) || isNaN(selectedSeatsCount) || selectedSeatsCount === 0){
         nextButton.disabled = true;
     } else{
         nextButton.disabled = false;
+        nextButton.classList.add('bg-[#1DD100]');
         nextButton.addEventListener('click', function(){
             const modalButton = getElement('modal-container');
             modalButton.classList.remove('hidden');
@@ -53,10 +58,10 @@ function checkCoupon(){
     const couponContainer = getElement('coupon-container');
     const couponApplyButton = getElement('coupon-button')
     const coupon = getElement('coupon');
-    // const coupleCoupon = 
     const couponValue = coupon.value;
     if(couponValue === 'NEW15'){
         couponApplyButton.disabled = false;
+        couponApplyButton.classList.add('bg-[#1DD100]');
         couponApplyButton.addEventListener('click', function(){
             fareCount(0.15);
             couponContainer.classList.add('hidden');
@@ -64,12 +69,15 @@ function checkCoupon(){
     }
     else if(couponValue === 'Couple 20'){
         couponApplyButton.disabled = false;
+        couponApplyButton.classList.add('bg-[#1DD100]');
         couponApplyButton.addEventListener('click', function(){
             fareCount(0.25);
             couponContainer.classList.add('hidden');
         })
     } else{
-        couponApplyButton.disabled = true;
+        if(couponApplyButton.disabled = true){
+        couponApplyButton.classList.remove('bg-[#1DD100]');
+        }
     }
 }
 

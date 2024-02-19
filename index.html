@@ -24,7 +24,7 @@
                 <p>Destination</p>
                 <p>Search</p>
             </div>
-            <button class="nav-btn flex gap-2 rounded-xl bg-[#1DD10019] font-raleway text-xl font-bold text-[#1DD100] px-7 py-4 border-[#1DD10066] border">Bus
+            <button id="nav-btn" class="nav-btn flex gap-2 rounded-xl bg-[#1DD10019] font-raleway text-xl font-bold text-[#1DD100] px-7 py-4 border-[#1DD10066] border">Bus
                 <img src="images/bus-icon.png" alt="">
             </button>
             </div>
@@ -177,7 +177,7 @@
             <!-- seat container -->
             <div class="mt-10 p-3 flex justify-around flex-col lg:flex-row md:flex-row">
                 <!--  -->
-                <div class="space-y-3 lg:w-2/4 md:lg:w-2/4">
+                <div id="select-seat" class="space-y-3 lg:w-2/4 md:lg:w-2/4">
                     <h3 class="font-raleway primary-heading text-xl font-semibold ">Select Your Seat</h3>
             <hr>
             <div class="flex justify-between items-center">
@@ -259,7 +259,7 @@
                 </div>
                 <div id="coupon-container" class="flex">
                     <input id="coupon" class="primary-text border rounded-lg py-2" type="text" placeholder="Have any copupon?">
-                <button id="coupon-button" class="text-white rounded-lg px-7 font-raleway font-bold bg-[#1DD100]" disabled>Apply</button>
+                <button id="coupon-button" class="text-white rounded-lg px-7 font-raleway font-bold btn" disabled>Apply</button>
                 </div>
 
                 <div class="flex justify-between primary-heading font-medium text-lg">
@@ -285,7 +285,7 @@
                 <input class="w-full py-2 rounded-xl border" type="text" placeholder="Enter your email id">
 
                 <!-- js modal to show button -->
-                <button id="next-button" class="w-full bg-[#1DD100] rounded-xl px-7 py-2 font-raleway text-xl font-bold text-white" disabled>
+                <button id="next-button" class="w-full btn border-2 rounded-xl px-7 py-2 font-raleway text-xl font-bold text-white" disabled>
                 Next
                 </button>
 
