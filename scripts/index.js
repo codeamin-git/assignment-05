@@ -16,16 +16,17 @@ function setBackgroundColorById(elementId){
     seatAndPhoneValidation();
 }
 
-function hideBackgroundColor(elementId){
-    elementId.classList.remove('bg-[#1DD100]');
-}
-
+const selectedSeats = new Set();
 function selectASeat(seatId){
     const seatNo = getElement(seatId);
     seatNo.addEventListener('click', function(){
-        if(selectedSeatsCount < 4){
+        if(!selectedSeats.has(seatId) && selectedSeatsCount < 4){
             setBackgroundColorById(seatNo);
+            selectedSeats.add(seatId);
             checkCoupon();
+        }
+        else if(selectedSeats.has(seatId)){
+            alert('This seat has already been selected');
         } else{
             alert('You can not purchase more than four seats at a time');
         }
